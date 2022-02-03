@@ -36,7 +36,11 @@ int main()
     {
         y = getFunctionY1(x, a);
     }
-    else if (x >= THRESHOLD)
+    else if (x > THRESHOLD)
+    {
+        y = getFunctionY2(x, a);
+    }
+    else
     {
         y = getFunctionY2(x, a);
     }
