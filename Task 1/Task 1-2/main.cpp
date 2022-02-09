@@ -41,7 +41,7 @@ double getQuotient (const double x, const double y);
 int main()
 {
 
-    long double x, y;
+    double x, y;
     cout << " Введите первое число: " << "\n" << " x = ";
     cin >> x;
 
