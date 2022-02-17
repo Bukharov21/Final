@@ -2,49 +2,48 @@
 #include <cmath>
 #include <iostream>
 
+using namespace std;
+
 /**
-*\brief Функция, работающая для ограничений x < a
-*\param x параметр x
-* param a параметр a
-*\return Значение функции
+*\ brief Функция, работающая для ограничений x < a.
+*\ param x параметр x.
+*\ param a параметр a.
+*\ return Значение функции.
 */
 double getFunctionY1(const double x, const double a);
 
 /**
-*\brief Функция, работающая для ограничений x >= a
-*\param x параметр x
-*\param a параметр a
-*\return Значение функции
+*\ brief Функция, работающая для ограничений x >= a.
+*\ param x параметр x.
+*\ param a параметр a.
+*\ return Значение функции.
 */
 double getFunctionY2(const double x, const double a);
 
 /**
-*\brief Точка входа в программу
-*\return 0 в случае успеха
+*\ brief Точка входа в программу.
+*\ return 0 в случае успеха.
 */
 int main()
 
 {
     const auto THRESHOLD = 1.4;
     const double a = 1.65;
-    std::cout << "Введите значение x = ";
+    cout << "Введите значение x = ";
     double x;
-    std::cin >> x;
-
+    cin >> x;
     double y;
-    if (x < 1.34)
+    
+    if (x >= THRESHOLD)
+    {
+        y = getFunctionY2(x, a);
+    }
+    else 
     {
         y = getFunctionY1(x, a);
     }
-    else if (x > THRESHOLD)
-    {
-        y = getFunctionY2(x, a);
-    }
-    else
-    {
-        y = getFunctionY2(x, a);
-    }
-    std::cout << "y = " << y;
+
+    cout << "y = " << y;
     return 0;
 }
 
