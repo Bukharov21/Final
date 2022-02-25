@@ -14,7 +14,8 @@ double Calculation(const double x);
 /**
 *\ brief Проверка на существование функции в x. 
 *\ brief param x заданная точка. 
-*\ return true, если значение в x существует. 
+*\ return true, если значение в x существует.
+*/
 bool isExists(const double x);
 
 /**
